@@ -1,0 +1,287 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'V-FEST 2026',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+ <Hero
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Daftar Sekarang',
+      href: '/pendaftaran',
+    },
+    {
+      text: 'Lihat Juknis',
+      href: 'https://drive.google.com/file/d/ABC123/view?usp=sharing',
+      target: '_blank',
+    },
+  ]}
+  image={{ src: '~/assets/images/vfest-hero.png', alt: 'V-FEST Image' }}
+>
+  <Fragment slot="title">
+    Visual Creativity Festival
+  </Fragment>
+
+  <Fragment slot="subtitle">
+    Dari Satu Langkah Karya Menggema Seribu Makna.
+  </Fragment>
+</Hero>
+
+<!-- LOADING SCREEN -->
+<div
+  id="loadingScreen"
+  class="fixed inset-0 z-[9999] hidden items-center justify-center bg-white"
+>
+  <div class="text-center">
+
+    <!-- SPINNER + LOGO -->
+    <div class="relative mx-auto mb-4 w-24 h-24">
+
+      <!-- BULATAN LOADING -->
+      <div class="absolute inset-0 animate-spin rounded-full border-4 border-red-600 border-t-yellow-300"></div>
+
+      <!-- LOGO DI TENGAH -->
+      <img
+        src="logoloading.png"
+        alt="Logo"
+        class="absolute top-1/2 left-1/2 w-12 h-12 object-contain logo-anim"
+      />
+
+    </div>
+
+    <!-- TEXT -->
+    <p class="text-xl font-semibold bg-gradient-to-r from-red-600 via-amber-400 to-yellow-300 bg-clip-text text-transparent">
+      Loading...
+    </p>
+
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+  const daftarBtn = document.querySelector('a[href="/pendaftaran"]');
+  const loadingScreen = document.getElementById('loadingScreen');
+
+  daftarBtn?.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    loadingScreen?.classList.remove('hidden');
+    loadingScreen?.classList.add('flex');
+
+    setTimeout(() => {
+      window.location.href = '/pendaftaran';
+    }, 1200);
+  });
+</script>
+
+<!-- ANIMASI LOGO -->
+<style>
+  @keyframes logoAnim {
+    0% {
+      transform: translate(-50%, -50%) scale(0.7);
+      opacity: 0;
+    }
+
+    50% {
+      transform: translate(-50%, -50%) scale(1.1);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+  }
+
+  .logo-anim {
+    animation: logoAnim 1s ease forwards;
+  }
+</style>
+
+  <!-- Tema Besar -->
+<section class="text-center mt-16 max-w-4xl mx-auto px-4">
+  <h2 class="text-4xl font-bold mb-6">Tema Besar</h2>
+
+  <p class="text-lg leading-relaxed text-gray-700">
+    Dari satu langkah karya, menggema seribu makna. Tema ini menegaskan bahwa setiap karya,
+    sekecil apa pun langkah awalnya, memiliki potensi untuk melahirkan dampak yang luas dan berlapis.
+    “Satu langkah karya” merepresentasikan keberanian untuk memulai sebuah proses sederhana ketika ide,
+    rasa, dan sudut pandang dituangkan ke dalam bentuk visual.
+  </p>
+
+  <p class="text-lg leading-relaxed text-gray-700 mt-4">
+    Menggema seribu makna menggambarkan bagaimana sebuah karya tidak berhenti pada satu tafsir.
+    Ia berkembang, menyentuh banyak sudut pandang, dan membuka ruang interpretasi yang luas bagi setiap orang.
+    Satu visual dapat menghadirkan beragam rasa, menginspirasi, menggugah, bahkan mengubah cara seseorang memaknai kehidupan.
+  </p>
+
+  <p class="text-lg leading-relaxed text-gray-700 mt-4">
+    Jadi tema ini mengandung harapan bahwa setiap peserta berani mengambil langkah awal dalam berkarya,
+    karena dari langkah sederhana tersebut dapat lahir gema makna yang tak terbatas dan berdampak luas.
+  </p>
+</section>
+
+<section class="max-w-5xl mx-auto px-4 py-16 space-y-16">
+
+  <a href="/fotografi" class="block">
+    <img
+      src="/tema-fotografi.png"
+      alt="Tema Fotografi"
+      class="w-full aspect-[16/7] object-cover rounded-2xl shadow-lg"
+    />
+  </a>
+
+  <a href="/desain" class="block">
+    <img
+      src="/tema-desain.png"
+      alt="Tema Desain Grafis"
+      class="w-full aspect-[16/7] object-cover rounded-2xl shadow-lg"
+    />
+  </a>
+
+  <a href="/vlog" class="block">
+    <img
+      src="/tema-video.png"
+      alt="Tema Video Vlog"
+      class="w-full aspect-[16/7] object-cover rounded-2xl shadow-lg"
+    />
+  </a>
+
+</section>
+</a>
+
+</Layout>
+<section class="py-10 bg-gray-100 mt-8">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 px-4">
+
+    <!-- KIRI -->
+    <div>
+      <h2 class="text-2xl font-bold mb-3">V-FEST 2026</h2>
+
+      <p class="text-gray-600 mb-2">
+        📍 Universitas Islam Negeri Madura, Jl. Raya Panglegur No.Km. 4, Barat,
+        Ceguk, Kec. Tlanakan, Kabupaten Pamekasan, Jawa Timur 69371
+      </p>
+
+      <a   href="https://wa.me/6282331080415?text=Halo%20kak,%20saya%20mau%20tanya%20tentang%20V-FEST"
+  target="_blank"
+  class="text-gray-600 hover:text-green-600 no-underline transition"
+  class="hover:underline"
+>
+        📞 082331080415
+      </a>
+
+      <a href="mailto:castionclass24@gmail.com"
+        class="block text-gray-600 hover:text-blue-500 mb-3">
+        📧 castionclass24@gmail.com
+      </a>
+
+      <p class="font-semibold mb-2">IKUTI KAMI</p>
+
+    <div class="flex gap-3">
+  <a
+    href="https://www.instagram.com/v_fest2026?igsh=MTl4Zjk3dXg2dmg4ag=="
+    target="_blank"
+    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-500 hover:bg-pink-500 text-white"
+    aria-label="Instagram"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-current">
+      <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM17 6.25a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/>
+    </svg>
+  </a>
+
+  <a
+    href="https://tiktok.com"
+    target="_blank"
+    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-500 hover:bg-black text-white"
+    aria-label="TikTok"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-current">
+      <path d="M14.5 3c.4 1.9 1.5 3.3 3.5 3.8V9c-1.5 0-2.8-.5-3.8-1.4v6.8a5.4 5.4 0 1 1-5.4-5.4c.3 0 .6 0 .9.1v2.8a2.7 2.7 0 1 0 1.8 2.5V3h3Z"/>
+    </svg>
+  </a>
+</div>
+    </div>
+
+    <!-- KANAN -->
+    <div class="space-y-4">
+
+      <!-- SUPPORTED -->
+      <div>
+        <h3 class="text-2xl font-bold mb-2">Supported By</h3>
+
+        <div class="flex gap-3 flex-wrap">
+          <a href="https://uinmadura.ac.id/" target="_blank">
+            <img src="/support1.png" class="h-12 object-contain" />
+          </a>
+
+          <a href="https://www.instagram.com/hmpskpiuinmadura?igsh=MW1rZWZkNGg1cjNqdA==" target="_blank">
+            <img src="/support2.png" class="h-12 object-contain" />
+          </a>
+
+          <a href="https://www.instagram.com/castion_24?igsh=eWdsZTNlcnk4MGw2" target="_blank">
+            <img src="/support3.png" class="h-12 object-contain" />
+          </a>
+        </div>
+      </div>
+
+      <!-- SPONSOR -->
+      <div>
+        <h3 class="text-2xl font-bold mb-2">Sponsorship</h3>
+
+        <div class="flex gap-3 flex-wrap">
+          <a href="https://www.instagram.com/abidigitalprint_adv?igsh=NTM5bnVoM3Ezdzhj" target="_blank">
+            <img src="/sponsor1.png" class="h-12 object-contain" />
+          </a>
+
+          <a href="https://www.instagram.com/saveunity_?igsh=MTl3NWplbWluOGNueg==" target="_blank">
+            <img src="/sponsor2.png" class="h-12 object-contain" />
+          </a>
+
+          <a href="https://www.instagram.com/berkahharamain?igsh=bXU3dml0eGJyNXl4">
+            <img src="/sponsor3.png" class="h-12 object-contain" />
+          </a>
+        </div>
+      </div>
+
+      <!-- MEDIA -->
+      <div>
+        <h3 class="text-2xl font-bold mb-2">Media Partner</h3>
+
+        <div class="flex gap-3 flex-wrap">
+          <a href="https://karimatafm.net/" target="_blank">
+            <img src="/media1.png" class="h-12 object-contain" />
+          </a>
+
+          <a href="https://ejscbakorwilpamekasan.wordpress.com/beranda/" target="_blank">
+            <img src="/media2.png" class="h-12 object-contain" />
+          </a>
+
+          <a href="https://klikmadura.com/" target="_blank">
+            <img src="/media3.png" class="h-12 object-contain" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

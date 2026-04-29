@@ -1,0 +1,171 @@
+---
+import Layout from '~/layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="relative min-h-screen px-6 md:px-16 py-24 text-white overflow-hidden bg-[linear-gradient(135deg,#ff1414_0%,#ff7a00_45%,#ffd600_100%)]">
+  <div class="max-w-7xl mx-auto animate-fade-up">
+
+    <div class="inline-block bg-white rounded-full px-8 md:px-12 py-5 mb-14 shadow-xl">
+      <h2 class="text-3xl md:text-6xl font-extrabold leading-[1.2] pb-2 bg-[linear-gradient(180deg,#ffd600,#ff8a00,#ff1414)] bg-clip-text text-transparent">
+        Tema Fotografi
+      </h2>
+    </div>
+
+    <h3 class="text-3xl md:text-5xl font-extrabold leading-tight mb-8">
+      Human Interest: Realita Sudut Kota
+    </h3>
+
+    <p class="max-w-6xl text-xl md:text-2xl leading-snug font-medium">
+      Tema ini menekankan tentang potret kehidupan manusia di berbagai sudut kota secara jujur dan menyentuh.
+      Melalui karya fotografi, peserta diharapkan mampu mengangkat kisah-kisah sederhana yang sering terabaikan
+      seperti aktivitas pekerja jalanan, interaksi sosial masyarakat, hingga dinamika kehidupan urban.
+      Foto tidak hanya menampilkan visual yang menarik, tetapi juga memiliki nilai cerita (storytelling)
+      yang kuat, emosional, dan mampu menggugah empati penikmatnya.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ===================== -->
+<!-- SECTION CV FOTOGRAFI -->
+<!-- ===================== -->
+<section class="relative min-h-screen px-6 md:px-16 py-16 text-white overflow-hidden bg-[linear-gradient(135deg,#ff1414_0%,#ff7a00_45%,#ffd600_100%)]">
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[38%_62%] gap-12 items-start">
+
+    <!-- FOTO -->
+    <div class="order-1 lg:order-1 overflow-hidden rounded-[0_80px_80px_0] lg:-ml-16 lg:-mt-16 shadow-2xl animate-slide-right">
+      <img
+        src="/cv-fotografi.png"
+        alt="CV Fotografi"
+        class="w-full h-[460px] md:h-[720px] object-cover object-top"
+      />
+    </div>
+
+    <!-- KONTEN -->
+    <div class="order-2 lg:order-2 animate-slide-left">
+
+      <h2 class="text-3xl md:text-5xl font-extrabold leading-[1.2] mb-6">
+        CV Pen. Jab Fotografi
+      </h2>
+
+      <p class="text-lg md:text-xl font-bold leading-snug mb-10">
+        Halo, saya Aisyah Safira, seorang mahasiswa aktif yang sedang menempuh pendidikan S1 di UIN Madura.
+        Saya memiliki minat besar di bidang kreativitas digital, khususnya dalam dunia videografi, fotografi,
+        penulisan, dan produksi film. Sejak masa sekolah, saya telah aktif mengembangkan kemampuan organisasi
+        dan keterampilan multimedia.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm md:text-[15px] leading-snug">
+
+        <!-- KOLOM 1 -->
+        <div>
+          <h3 class="text-xl md:text-2xl font-extrabold mb-2">Alamat</h3>
+          <p class="mb-6">
+            Jalan Dusun Kadundung, RT.3/RW.1,<br />
+            Buddagan, Pademawu, Kab. Pamekasan,<br />
+            Jawa Timur
+          </p>
+
+          <h3 class="text-xl md:text-2xl font-extrabold mb-2">Pendidikan</h3>
+          <p class="mb-2">● 2011-2017<br />SMPN 5 Pamekasan</p>
+          <p>● 2017-2020<br />MAN 2 Pamekasan</p>
+        </div>
+
+        <!-- KOLOM 2 -->
+        <div>
+          <h3 class="text-xl md:text-2xl font-extrabold mb-2">Pengalaman</h3>
+
+          <p class="mb-2">● 2023-2024<br />Ketua organisasi multimedia (MAN 2 Pamekasan)</p>
+          <p class="mb-2">● 2023<br />Mengikuti lomba videografi tingkat nasional di Palembang (Juara ide terbaik)</p>
+          <p class="mb-2">● 2022-2024<br />Menjadi scriptwriter dan sutradara dalam beberapa proyek film</p>
+          <p class="mb-2">● 2024-Sekarang<br />Menerbitkan beberapa karya tulis berupa cerpen</p>
+          <p>● 2024-Sekarang<br />Koordinator Divisi Media & Publikasi HMPS KPI</p>
+        </div>
+
+        <!-- KOLOM 3 -->
+        <div>
+          <h3 class="text-xl md:text-2xl font-extrabold mb-2">Skill Software</h3>
+          <p class="mb-6">
+            Filmora<br />
+            Capcut<br />
+            Lightroom
+          </p>
+
+          <h3 class="text-xl md:text-2xl font-extrabold mb-2">Hard Skill</h3>
+          <p class="mb-6">
+            Editing Video<br />
+            Fotografi
+          </p>
+
+          <h3 class="text-xl md:text-2xl font-extrabold mb-2">Soft Skill</h3>
+          <p class="mb-6">
+            Manajemen waktu<br />
+            Kerja sama tim
+          </p>
+
+          <h3 class="text-xl md:text-2xl font-extrabold mb-2">Contact | Sosmed</h3>
+          <p>
+            @safir_aisy<br />
+            087777389068
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===================== -->
+<!-- ANIMASI -->
+<!-- ===================== -->
+<style>
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.9s ease-out both;
+}
+
+.animate-slide-right {
+  animation: slideRight 1s ease-out both;
+}
+
+.animate-slide-left {
+  animation: slideLeft 1s ease-out both;
+}
+</style>
